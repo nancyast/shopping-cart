@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SingleProduct from './SingleProduct';
+import Shop from './Shop';
 
 const Home = () => <h2>Home</h2>;
-const Shop = () => <h2>Shop</h2>;
-//const SingleProduct = () => <h2>SingleProduct</h2>;
 
 const AppRouter = () => (
   <Router>
