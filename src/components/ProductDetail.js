@@ -29,16 +29,9 @@ class ProductDetail extends Component {
     let quantity = this.state.quantity;
     return(
       <div className="product-detail">
-        <h4>Pocket cotton sweatshirt</h4>
+        <h4>{this.props.product.name}</h4>
         <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
-        <div className="price">$495.00</div>
-        <div>Select color:
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
+        <div className="price">${this.props.product.price.toFixed(2)}</div>
         <QuantityInput onClick={this.handleChange} value={this.state.quantity}/>
         <div className="addToCart" onClick={()=> this.props.addToCart({id, quantity})}>Add to cart</div>
       </div>
@@ -48,7 +41,7 @@ class ProductDetail extends Component {
 
 
 function mapStateToProps(state) {
-  return null;
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {

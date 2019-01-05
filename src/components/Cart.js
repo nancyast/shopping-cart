@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {removeFromCart} from '../constants/action';
 
 
@@ -48,6 +48,7 @@ class Cart extends Component{
           products: addedProducts
         });
       })
+      return 1;
     });
   }
   componentDidMount(){
@@ -78,13 +79,14 @@ class Cart extends Component{
     let total = 0;
     quantitys.map((quantity, index) =>{
       total += quantity * prices[index];
+      return 1;
     });
 
     let cart = (addedProducts.length === 0 ? (
       <div className="cart-container">
         <h3 className="no-item">YOUR CART HAS NO ITEM</h3>
         <div className="continue-shopping">
-          <i class="fas fa-shopping-cart"></i>
+          <i className="fas fa-shopping-cart"></i>
           <Link to="/productlist">
             <button>Continue shopping !</button>
           </Link>
@@ -124,10 +126,6 @@ class Cart extends Component{
         </div>
         <div className="total">
           <div>Total: <span>{`$ ${total.toFixed(2)}`}</span></div>
-          <div>
-            <input type="text" placeholder="promotion code here"/>
-            <button>Accept</button>
-          </div>
           <div className="checkout">Check out</div>
         </div>
         <div className="clear"></div>

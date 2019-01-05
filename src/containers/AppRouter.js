@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { initialize } from "../constants/action";
 import Shop from './Shop';
-import Home from './Home';
 import Nav from './Nav';
 import SingleProduct from '../components/SingleProduct';
 import Cart from '../components/Cart';
@@ -65,7 +64,6 @@ class AppRouter extends Component {
         <BrowserRouter>
             <div>
                 <Nav/>
-                <Route exact path="/"  component={Home} />
                 <Route path="/productlist" component={Shop} />
                 <Route path={`/product/:id`} component={SingleProduct}/>
                 <Route path={'/checkout/cart'} component={Cart}/>

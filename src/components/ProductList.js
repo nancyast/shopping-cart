@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addToCart } from "../constants/action";
@@ -18,11 +18,11 @@ class ProductList extends Component {
             }
             let obj = {id: product.id, quantity: 1};
             return (
-                <div className="product">
-                  <Link to={`/product/${product.id}`} key={index}>
+                <div className="product" key={index}>
+                  <Link to={`/product/${product.id}`}>
                     <div className="product-image" style={style}></div>
                     <div className="product-name" >
-                      <h4>{product.name}</h4>
+                      <h4 style={{height : "36px"}}>{product.name}</h4>
                       <h4>${product.price}</h4>
                     </div>
                   </Link>
