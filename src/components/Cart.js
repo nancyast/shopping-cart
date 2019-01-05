@@ -87,7 +87,7 @@ class Cart extends Component{
         <h3 className="no-item">YOUR CART HAS NO ITEM</h3>
         <div className="continue-shopping">
           <i className="fas fa-shopping-cart"></i>
-          <Link to="/productlist">
+          <Link to="/">
             <button>Continue shopping !</button>
           </Link>
         </div>

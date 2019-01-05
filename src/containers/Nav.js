@@ -5,6 +5,10 @@ import { bindActionCreators } from "redux";
 
 
 const Nav = ({addedProducts})=>{
+  let sumQuantity = 0;
+  for(let item of addedProducts){
+    sumQuantity += item.quantity;
+  }
   return(
     <nav>
       <ul>
@@ -14,7 +18,7 @@ const Nav = ({addedProducts})=>{
         <li><Link to="/">Shop</Link></li>
         <li className="cart">
           <Link to="/checkout/cart"><i className="fas fa-shopping-cart"></i></Link>
-          <div className="num-item">{addedProducts.length}</div>
+          <div className="num-item">{sumQuantity}</div>
         </li>
       </ul>
     </nav>
