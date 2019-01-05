@@ -2,7 +2,40 @@
   padding: 0;
   margin: 0;
 }
-.shop-container{
+.clear{
+  clear: both;
+}
+/* Nav Component */
+nav{
+  width: 1140px;
+  height: 50px;
+  margin: 0 auto;
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  padding: 5px;
+  margin: 0 20px;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+nav ul li a{
+  text-decoration: none;
+}
+nav ul li.cart{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #eceff6;
+}
+
+/* Shop Component */
+.shop-container, .cart-container{
   width: 1140px;
   margin: 0 auto;
 }
@@ -21,12 +54,20 @@
   float: left;
 }
 .product{
-  width: 25%;
+  width: 23%;
   height: 350px;
+  margin: 1%;
   float: left;
   position: relative;
-  border: 1px solid #333;
   cursor: pointer;
+  box-sizing: border-box;
+}
+.product .product-image{
+  width: 100%;
+  height: 245px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .product .product-name{
   width: 100%;
@@ -50,6 +91,7 @@
 .product:hover > .add-to-cart{
   visibility: visible;
 }
+
 .product-content{
   margin: 0 auto;
   width: 1140px;
@@ -80,3 +122,130 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.product-detail h4{
+  font-size: 35px;
+}
+.product-detail p{
+  font-size: 20px;
+  padding: 20px 5px;
+}
+.product-detail div.price{
+  font-size: 35px;
+  color: #fe4c50;
+  padding-top: 60px;
+}
+
+div.quantity{
+  display: inline-block;
+}
+div.quantity div{
+  display: inline-block;
+  text-align: center;
+}
+div.quantity .input{
+  width: 120px;
+  height: 40px;
+  border: 1px solid #666;
+  border-radius: 2px;
+  line-height: 40px;
+  margin: 0px 20px;
+}
+div.quantity .input div{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+div.quantity .input div:first-child{
+  cursor: pointer;
+}
+div.quantity .input div:last-child{
+  cursor: pointer;
+}
+.addToCart{
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px 20px;
+  background-color: #fe4c50;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.addToCart:hover{
+  opacity: 0.8;
+  transition: 0.4s linear;
+}
+/* Cart Component */
+.cart-container .selected-products{
+  width: 850px;
+  margin: 0 10px;
+}
+.selected-products .product{
+  width: 100%;
+  height: 150px;
+  margin: 1px 0;
+  border-bottom: #dbd6d6;
+}
+.selected-products .product .image{
+  width: 150px;
+  height: 150px;
+  float: left;
+}
+.selected-products .product .infor{
+  float: left;
+  width: 470px;
+  height: 150px;
+}
+.selected-products .product .total-price{
+  float: left;
+  height: 150px;
+}
+.selected-products .product .total-price h4{
+  padding: 30px 0px;
+  line-height: 40px;
+}
+
+.cart-container .total{
+  width: 250px;
+  margin: 0 10px;
+  float: left;
+}
+.cart-container .total div{
+  height: 40px;
+  margin: 10px 0;
+  line-height: 40px;
+  border-bottom: 1px solid #dbd6d6;
+}
+.cart-container .total div input{
+  height: 40px;
+  box-sizing: border-box;
+}
+.cart-container .total div button{
+  height: 40px;
+  width: 75px;
+  border: none;
+  box-sizing: border-box;
+  background: #fdd835;
+  color: #809fa9;
+  cursor: pointer;
+}
+.cart-container .total div:last-child{
+  margin: 10px 0;
+  font-size: 20px;
+  text-align: center;
+  background-color: #fe4c50;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cart-container .total div:last-child:hover{
+  background-color: #fc0509;
+}
+

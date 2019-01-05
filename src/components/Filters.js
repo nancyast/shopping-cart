@@ -24,7 +24,10 @@ export default class Filters extends Component {
           <button>Filter</button>
         </div>
         <div className="size-filter">
-
+          <h3>Size</h3>
+        </div>
+        <div className="color-filter">
+          <h3>Color</h3>
         </div>
       </div>
     );

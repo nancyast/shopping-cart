@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Controls extends Component {
+class Controls extends Component {
   constructor(props){
     super(props)
   }
@@ -13,3 +13,5 @@ export default class Controls extends Component {
     );
   }
 }
+
+export default Controls;

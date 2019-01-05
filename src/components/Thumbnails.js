@@ -1,12 +1,9 @@
 import React, {Component} from 'react';
-import thumbnail1 from '../../images/thumbnail-1.png';
-import thumbnail2 from '../../images/thumbnail-2.png';
-import thumbnail3 from '../../images/thumbnail-3.png';
-import image1 from '../../images/image-1.png';
-import image2 from '../../images/image-2.png';
-import image3 from '../../images/image-3.png';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-export class Thumbnails extends Component {
+
+class Thumbnails extends Component {
   constructor(props){
     super(props)
 
@@ -21,23 +18,19 @@ export class Thumbnails extends Component {
     });
   }
   render(){
-    let thumbnailsObj = [
+    const images = this.props.product.images;
+    const thumbnailsObj = [
       {
-        background: thumbnail1,
-        src : image1
+        background: images[0].url,
       },
       {
-        background: thumbnail2,
-        src : image2
+        background: images[1].url,
       },
       {
-        background: thumbnail3,
-        src : image3
+        background: images[2].url,
       }
     ];
-
     const activeIndex = this.state.activeThumbnailIndex;
-
     return(
       <div className="thumbnails">
         {
@@ -53,8 +46,10 @@ export class Thumbnails extends Component {
               );
           })
         }
-        <div className="image" style={{backgroundImage: `url("${thumbnailsObj[activeIndex].src}")`}}></div>
+        <div className="image" style={{backgroundImage: `url("${thumbnailsObj[activeIndex].background}")`}}></div>
       </div>
     );
   }
 }
+
+export default Thumbnails;
