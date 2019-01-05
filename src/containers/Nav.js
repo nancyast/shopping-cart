@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
 
-const Nav = ()=>{
+const Nav = ({addedProducts})=>{
   return(
     <nav>
       <ul>
@@ -12,11 +14,24 @@ const Nav = ()=>{
         <li><Link to="/">Shop</Link></li>
         <li className="cart">
           <Link to="/checkout/cart"><i className="fas fa-shopping-cart"></i></Link>
-          <div className="num-item">1</div>
+          <div className="num-item">{addedProducts.length}</div>
         </li>
       </ul>
     </nav>
   );
 }
 
-export default Nav;
+function mapStateToProps(state) {
+  return {
+   addedProducts: state.addedProducts
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({  }, dispatch);
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Nav);
