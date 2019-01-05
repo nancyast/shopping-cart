@@ -9,11 +9,20 @@ export const initialize = (products) => {
 
 export const ADD_TO_CART = "ADD_TO_CART";
 
-export const addToCart = ({productId, quantity}) => {
+export const addToCart = ({id, quantity}) => {
   return {
     type: ADD_TO_CART,
-    productId : productId,
+    productId : id,
     quantity : quantity
+  }
+}
+
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+
+export const removeFromCart = (id) => {
+  return {
+    type: REMOVE_FROM_CART,
+    productId : id
   }
 }
 

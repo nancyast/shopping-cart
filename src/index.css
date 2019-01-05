@@ -10,6 +10,7 @@ nav{
   width: 1140px;
   height: 50px;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 nav ul{
   list-style: none;
@@ -24,7 +25,7 @@ nav ul li{
   line-height: 50px;
   text-align: center;
 }
-nav ul li a{
+a{
   text-decoration: none;
 }
 nav ul li.cart{
@@ -59,7 +60,6 @@ nav ul li.cart{
   margin: 1%;
   float: left;
   position: relative;
-  cursor: pointer;
   box-sizing: border-box;
 }
 .product .product-image{
@@ -76,7 +76,7 @@ nav ul li.cart{
   left: 0;
   bottom: 35px;
 }
-.product .add-to-cart{
+.add-to-cart{
   width: 100%;
   height: 35px;
   position: absolute;
@@ -87,7 +87,10 @@ nav ul li.cart{
   line-height: 35px;
   text-align: center;
   visibility: hidden;
+  z-index: 10;
+  cursor: pointer;
 }
+
 .product:hover > .add-to-cart{
   visibility: visible;
 }
@@ -190,8 +193,9 @@ div.quantity .input div:last-child{
 .selected-products .product{
   width: 100%;
   height: 150px;
-  margin: 1px 0;
+  margin: 10px 0;
   border-bottom: #dbd6d6;
+  border-right: 1px solid #809fa9;
 }
 .selected-products .product .image{
   width: 150px;
@@ -203,12 +207,23 @@ div.quantity .input div:last-child{
   width: 470px;
   height: 150px;
 }
+.selected-products .product .infor h4{
+  margin: 20px 0;
+  font-size: 20px;
+}
+.selected-products .product .infor .delete{
+  font-style: italic;
+  color: #809fa9;
+  cursor: pointer;
+}
 .selected-products .product .total-price{
+  padding-top: 10px;
   float: left;
   height: 150px;
+  box-sizing: border-box;
 }
 .selected-products .product .total-price h4{
-  padding: 30px 0px;
+  padding: 15px 0px;
   line-height: 40px;
 }
 
@@ -217,6 +232,7 @@ div.quantity .input div:last-child{
   margin: 0 10px;
   float: left;
 }
+
 .cart-container .total div{
   height: 40px;
   margin: 10px 0;
@@ -247,5 +263,33 @@ div.quantity .input div:last-child{
 }
 .cart-container .total div:last-child:hover{
   background-color: #fc0509;
+}
+.cart-container .no-item{
+  text-align: center;
+  margin-top: 100px;
+  color: #666;
+}
+.cart-container .continue-shopping{
+  text-align: center;
+  width: 200px;
+  margin: 30px auto;
+}
+.cart-container .continue-shopping i{
+  display: block;
+  font-size: 100px;
+  color: #809fa9;
+  margin: 30px;
+}
+.cart-container .continue-shopping button{
+  display: block;
+  margin: 30px auto;
+  width: 230px;
+  height: 45px;
+  font-size: 20px;
+  color: #809fa9;
+  background-color: #fdd835;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 

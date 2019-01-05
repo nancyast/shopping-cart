@@ -7,7 +7,6 @@ class QuantityInput extends Component{
   }
 
   render(){
-    console.log(this.props.value);
     return(
       <div className="quantity">
         Quantity:

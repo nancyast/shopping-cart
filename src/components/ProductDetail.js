@@ -25,7 +25,7 @@ class ProductDetail extends Component {
     }
   }
   render(){
-    let productId = this.props.product.id;
+    let id = this.props.product.id;
     let quantity = this.state.quantity;
     return(
       <div className="product-detail">
@@ -40,7 +40,7 @@ class ProductDetail extends Component {
           </ul>
         </div>
         <QuantityInput onClick={this.handleChange} value={this.state.quantity}/>
-        <div className="addToCart" onClick={()=> this.props.addToCart({productId, quantity})}>Add to cart</div>
+        <div className="addToCart" onClick={()=> this.props.addToCart({id, quantity})}>Add to cart</div>
       </div>
     );
   }

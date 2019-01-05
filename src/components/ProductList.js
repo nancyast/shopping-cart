@@ -16,17 +16,18 @@ class ProductList extends Component {
               backgroundImage: `url("${product.images[0].url}")`,
               backgroundSize: 'cover'
             }
+            let obj = {id: product.id, quantity: 1};
             return (
-              <Link to={`/product/${product.id}`} key={index}>
                 <div className="product">
-                  <div className="product-image" style={style}></div>
-                  <div className="product-name" >
-                    <h4>{product.name}</h4>
-                    <h4>${product.price}</h4>
-                  </div>
-                  <div className="add-to-cart" onClick={()=>{this.props.addToCart(product.id, 1)}}>ADD TO CART</div>
+                  <Link to={`/product/${product.id}`} key={index}>
+                    <div className="product-image" style={style}></div>
+                    <div className="product-name" >
+                      <h4>{product.name}</h4>
+                      <h4>${product.price}</h4>
+                    </div>
+                  </Link>
+                  <div className="add-to-cart" onClick={()=>{this.props.addToCart(obj)}}>ADD TO CART</div>
                 </div>
-              </Link>
             )
           })
         }

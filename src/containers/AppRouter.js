@@ -8,6 +8,7 @@ import Home from './Home';
 import Nav from './Nav';
 import SingleProduct from '../components/SingleProduct';
 import Cart from '../components/Cart';
+import { getAllProducts } from '../api/api';
 
 class AppRouter extends Component {
   constructor(props){
@@ -56,39 +57,7 @@ class AppRouter extends Component {
   */
 
   componentDidMount(){
-    const url = "https://nordic-shop-api.herokuapp.com/";
-    let query = `query products {
-      products {
-        id
-        name
-        rating
-        price
-        images {
-          url
-          alt
-        }
-      }
-    }`;
-
-    fetch(url,{
-        method: "POST",
-        mode: "cors",
-        credentials: "omit",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          variables: {},
-          query: query,
-        })
-    }).then(response => response.json())
-      .then(json => {
-        let products = [];
-        Object.values(json.data.products).forEach(product => {
-          products.push(product);
-        });
-        this.props.initialize(products);
-    })
+    getAllProducts(this.props.initialize);
   }
 
   render(){
