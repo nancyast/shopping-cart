@@ -62,7 +62,7 @@ class AppRouter extends Component {
   render(){
     return(
         <BrowserRouter>
-            <div>
+            <div className="app">
                 <Nav/>
                 <Route exact path="/" component={Shop} />
                 <Route path={`/product/:id`} component={SingleProduct}/>

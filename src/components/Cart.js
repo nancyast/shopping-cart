@@ -117,7 +117,7 @@ class Cart extends Component{
                   </div>
                   <div className="total-price">
                     <h4>Quantity : {quantity}</h4>
-                    <h4>Total price: <span>{`$ ${(quantity * price).toFixed(2)}`}</span></h4>
+                    <h4>Price: <span>{`$ ${(quantity * price).toFixed(2)}`}</span></h4>
                   </div>
                 </div>
               );
