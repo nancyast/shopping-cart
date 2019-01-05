@@ -33,7 +33,7 @@ img {
 }
 /* Nav Component */
 nav{
-  width: 1140px;
+  width: 100vw;
   height: 130px;
   border-bottom: 1px solid #ccc;
   position: fixed;
@@ -41,7 +41,6 @@ nav{
   left: 0;
   background: rgba(255, 255, 255, .95);
   z-index: 99;
-  transform: translateX(50%);
 }
 nav ul{
   list-style: none;
@@ -276,11 +275,13 @@ div.quantity .input div:last-child{
   height: 150px;
 }
 .selected-products .product .infor h4{
-  margin: 20px 0;
+  margin: 20px 0 20px 20px;
+  text-align: left;
   font-size: 20px;
 }
 .selected-products .product .infor .delete{
   font-style: italic;
+  font-size: 17px;
   color: #809fa9;
   cursor: pointer;
 }

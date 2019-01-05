@@ -23,7 +23,7 @@ class ProductList extends Component {
                     <div className="product-image" style={style}></div>
                     <div className="product-name" >
                       <h4 style={{height : "36px"}}>{product.name}</h4>
-                      <h4>${product.price}</h4>
+                      <h4 style={{color: "#d06236", marginTop: "8px"}}>${product.price}</h4>
                     </div>
                   </Link>
                   <div className="add-to-cart" onClick={()=>{this.props.addToCart(obj)}}>ADD TO CART</div>

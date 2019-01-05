@@ -112,12 +112,12 @@ class Cart extends Component{
                     <Link to={`/product/${product.id}`}>
                       <h4>{product.name}</h4>
                     </Link>
-                    <h4>$ {product.price}</h4>
+                    <h4 style={{color: "#d06236"}}>$ {product.price}</h4>
                     <h4 className="delete" onClick={()=>{this.handleDelete(product.id)}}>Delete</h4>
                   </div>
                   <div className="total-price">
-                    <h4>Quantity : {quantity}</h4>
-                    <h4>Price: <span>{`$ ${(quantity * price).toFixed(2)}`}</span></h4>
+                    <h4 style={{color: "#0184af"}}>Quantity : {quantity}</h4>
+                    <h4 style={{color: "red"}}>Price: <span>{`$ ${(quantity * price).toFixed(2)}`}</span></h4>
                   </div>
                 </div>
               );
@@ -125,7 +125,7 @@ class Cart extends Component{
           }
         </div>
         <div className="total">
-          <div>Total: <span>{`$ ${total.toFixed(2)}`}</span></div>
+          <div style={{color: "red", fontSize: "20px"}}>Total: <span>{`$ ${total.toFixed(2)}`}</span></div>
           <div className="checkout">Check out</div>
         </div>
         <div className="clear"></div>
