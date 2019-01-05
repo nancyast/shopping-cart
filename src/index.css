@@ -262,7 +262,6 @@ div.quantity .input div:last-child{
   height: 150px;
   margin: 10px 0;
   border-bottom: #dbd6d6;
-  border-right: 1px solid #809fa9;
 }
 .selected-products .product .image{
   width: 150px;
