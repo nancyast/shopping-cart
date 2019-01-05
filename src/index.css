@@ -43,9 +43,20 @@ nav ul li.cart{
   height: 50px;
   border-radius: 50%;
   background-color: #eceff6;
+  position: relative;
 }
 nav ul li.cart .num-item{
-
+  background-color: #fe4c50;
+  width: 23px;
+  height: 23px;
+  font-size: 17px;
+  border-radius: 50%;
+  line-height: 23px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top:-5px;
+  right: -5px;
 }
 
 /* Shop Component */
