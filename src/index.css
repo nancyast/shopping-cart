@@ -44,6 +44,9 @@ nav ul li.cart{
   border-radius: 50%;
   background-color: #eceff6;
 }
+nav ul li.cart .num-item{
+
+}
 
 /* Shop Component */
 .shop-container, .cart-container{
@@ -140,6 +143,9 @@ nav ul li.cart{
   grid-column: 2 / span 1;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.product-detail{
+  padding-left: 30px;
 }
 
 .product-detail h4{

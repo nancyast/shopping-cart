@@ -104,7 +104,7 @@ class Cart extends Component{
               let quantity = quantitys[index];
               let price = product.price;
               return(
-                <div className="product">
+                <div className="product" key={index}>
                   <Link to={`/product/${product.id}`}>
                     <div className="image" style={style}></div>
                   </Link>
