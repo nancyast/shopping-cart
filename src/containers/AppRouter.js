@@ -64,7 +64,7 @@ class AppRouter extends Component {
         <BrowserRouter>
             <div>
                 <Nav/>
-                <Route path="/productlist" component={Shop} />
+                <Route path="/" component={Shop} />
                 <Route path={`/product/:id`} component={SingleProduct}/>
                 <Route path={'/checkout/cart'} component={Cart}/>
             </div>
